@@ -12,8 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FixSwift CRM",
-  description: "Inventory and Billing Management",
+  title: "Partner Mobile CRM",
+  description: "Smart Business Management Platform for Sales, Inventory, CRM and Business Intelligence",
 };
 
 export default function RootLayout({
