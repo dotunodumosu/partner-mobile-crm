@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import Link from 'next/link';
 import Image from 'next/image';
+
 import { Mail, Lock, AlertCircle, Smartphone, Wifi, ShieldCheck } from 'lucide-react';
 
 export default function LoginPage() {
@@ -34,17 +35,20 @@ export default function LoginPage() {
         {/* Left Branding Section */}
         <div className="bg-gradient-to-br from-white to-blue-50 p-10 lg:p-14 flex flex-col justify-between">
           <div>
-            <div className="mb-16">
-              <Image
-                src="/images/partner-logo.png"
-                alt="Partner Mobile Logo"
-                width={160}
-                height={60}
-                priority
-              />
-            </div>
+            <div className="flex justify-center mb-8">
+    <Link href="/">
+        <Image
+            src="/images/partner-logo.png"
+            alt="Partner Mobile"
+            width={160}
+            height={60}
+            priority
+            className="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+    </Link>
+</div>
 
-            <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
+            <h1 className="text-2xl lg:text-3xl font-extrabold text-gray-900 leading-tight">
               Welcome to <br /> Partner Mobile
             </h1>
 
@@ -155,7 +159,7 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition disabled:opacity-60"
+                className="w-full bg-blue-600 hover:bg-blue-700 hover:shadow-xl transition-all duration-300 text-white font-bold py-4 rounded-xl transition disabled:opacity-60"
               >
                 {loading ? 'Signing in...' : 'Sign In'}
               </button>
