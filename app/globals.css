@@ -120,6 +120,13 @@
 
 :root {
   --radius: 0.625rem;
+
+  /* Partner Mobile Brand Colors */
+  --partner-red: #f83838;
+  --partner-red-dark: #e22f2f;
+  --partner-light: #fff6f6;
+  --partner-dark: #2f2f3a;
+  
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
