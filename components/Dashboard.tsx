@@ -1,11 +1,15 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
 import { BillingStatus } from '../types';
 import { AlertCircle } from 'lucide-react';
 import { useInventory } from '../contexts/InventoryContext';
 import { useRouter } from 'next/navigation';
 import { useDashboardStats } from '../hooks/useDashboardStats';
+
 import { DashboardStats } from './dashboard/DashboardStats';
 import { RevenueChart } from './dashboard/RevenueChart';
 import { CategoryChart } from './dashboard/CategoryChart';
@@ -41,20 +45,37 @@ export const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 animate-in fade-in duration-500 px-6 py-4">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 gap-4">
+    <div className="flex flex-col lg:flex-row justify-between items-center mb-8 gap-6">
+      <div className="flex items-center gap-5">
+       <Link href="/dashboard">
+          <Image
+            src="/images/partner-logo.png"
+            alt="Partner Mobile"
+            width={120}
+            height={45}
+            priority
+            className="cursor-pointer transition-transform duration-300 hover:scale-105"
+          />
+      </Link>
+
         <div>
-          <h2 className="text-base font-bold text-primary-900">Operational Overview</h2>
-          <p className="text-sm text-primary-700">Real-time insight into inventory health and financial performance.</p>
+          <h1 className="text-2xl font-bold text-gray-900">
+            Partner Mobile CRM
+            </h1>
+
+          <p className="text-sm text-gray-500">
+            Sales • Inventory • Billing Dashboard
+            </p>
         </div>
-        <button
-          onClick={() => router.push('/inventory?action=add')}
-          className="flex items-center gap-2 bg-[#369282] hover:bg-[#2d7a6d] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-        >
-          <span className="text-lg leading-none">+</span>
-          Add Product
-        </button>
       </div>
+
+      <button
+        onClick={() => router.push('/inventory?action=add')}
+        className="flex items-center gap-2 bg-[var(--partner-red)] hover:bg-[var(--partner-red-dark)] text-white px-5 py-3 rounded-xl font-semibold shadow-lg transition-all"
+      >
+        <span className="text-lg leading-none">+</span>
+        Add Product
+      </button>
 
       {/* Financial Metrics */}
       <DashboardStats

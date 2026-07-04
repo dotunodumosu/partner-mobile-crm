@@ -46,11 +46,11 @@ export default function RegisterPage() {
       <div className="w-full max-w-md">
         {/* Logo/Brand */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-2xl mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-[var(--partner-red)] rounded-2xl mb-4">
             <UserPlus className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900">Create Account</h1>
-          <p className="text-gray-600 mt-2">Join FixSwift CRM today</p>
+          <h1 className="text-3xl font-bold text-gray-900">Create Partner Mobile Account</h1>
+          <p className="text-gray-600 mt-2">Create your Partner Mobile CRM access</p>
         </div>
 
         {/* Register Form */}
@@ -153,7 +153,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-[var(--partner-red)] hover:bg-[var(--partner-red-dark)] text-white font-medium py-3 px-4 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>
@@ -173,7 +173,7 @@ export default function RegisterPage() {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Already have an account?{' '}
-              <Link href="/login" className="text-indigo-600 hover:text-indigo-700 font-medium">
+              <Link href="/login" className="text-[var(--partner-red)] hover:text-[var(--partner-red-dark)] font-medium">
                 Sign in
               </Link>
             </p>
@@ -182,7 +182,7 @@ export default function RegisterPage() {
 
         {/* Footer */}
         <p className="text-center text-sm text-gray-500 mt-8">
-          © 2024 FixSwift CRM. All rights reserved.
+          © 2026 Partner Mobile Ltd. All rights reserved.
         </p>
       </div>
     </div>

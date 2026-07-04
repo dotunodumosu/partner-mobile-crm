@@ -30,8 +30,8 @@ export function TopNav() {
             <div className="flex-shrink-0 flex items-center">
               <div className="relative h-8 w-32">
                 <Image 
-                  src="/logo.webp" 
-                  alt="FixSwift Logo" 
+                  src="/images/partner-logo.png" 
+                  alt="Partner Mobile Logo" 
                   fill
                   className="object-contain"
                   priority
@@ -45,7 +45,7 @@ export function TopNav() {
                 href="/dashboard"
                 className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/dashboard') 
-                    ? 'bg-slate-100 text-slate-900' 
+                    ? 'bg-[var(--partner-light)] text-[var(--partner-red)]' 
                     : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                 }`}
               >
@@ -57,7 +57,7 @@ export function TopNav() {
                 href="/inventory"
                 className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/inventory') 
-                    ? 'bg-slate-100 text-slate-900' 
+                    ? 'bg-[var(--partner-light)] text-[var(--partner-red)]' 
                     : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                 }`}
               >
@@ -66,7 +66,7 @@ export function TopNav() {
               </Link>
 
               <a
-                href="https://fixswift.in"
+                href="https://partnermobile.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors"
@@ -81,7 +81,7 @@ export function TopNav() {
           <div className="hidden md:flex items-center space-x-4">
             <button 
               onClick={() => router.push('/inventory?action=add')}
-              className="flex items-center gap-2 bg-[#369282] hover:bg-[#2d7a6d] text-white px-3 py-1.5 rounded-lg text-sm font-medium transition-all shadow-sm"
+              className="flex items-center gap-2 bg-[var(--partner-red)] hover:bg-[var(--partner-red-dark)] text-white px-3 py-1.5 rounded-lg text-sm font-medium transition-all shadow-sm"
             >
               <PlusCircle className="w-4 h-4" />
               <span>Quick Add</span>
@@ -114,7 +114,7 @@ export function TopNav() {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#369282]"
+              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--partner-red)]"
             >
               <span className="sr-only">Open main menu</span>
               {isMobileMenuOpen ? (
@@ -136,7 +136,7 @@ export function TopNav() {
               onClick={() => setIsMobileMenuOpen(false)}
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/dashboard')
-                  ? 'bg-slate-100 text-slate-900'
+                  ? 'bg-[var(--partner-light)] text-[var(--partner-red)]'
                   : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
               }`}
             >
@@ -151,7 +151,7 @@ export function TopNav() {
               onClick={() => setIsMobileMenuOpen(false)}
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/inventory')
-                  ? 'bg-slate-100 text-slate-900'
+                  ? 'bg-[var(--partner-light)] text-[var(--partner-red)]'
                   : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
               }`}
             >
@@ -162,7 +162,7 @@ export function TopNav() {
             </Link>
 
             <a
-              href="https://fixswift.in"
+              href="https://partnermobile.com"
               target="_blank"
               rel="noopener noreferrer"
               className="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900"
@@ -195,7 +195,7 @@ export function TopNav() {
                   router.push('/inventory?action=add');
                   setIsMobileMenuOpen(false);
                 }}
-                className="w-full flex items-center px-3 py-2 rounded-md text-base font-medium text-[#369282] hover:bg-slate-50"
+                className="w-full flex items-center px-3 py-2 rounded-md text-base font-medium text-[var(--partner-red)] hover:bg-slate-50"
               >
                 <PlusCircle className="w-5 h-5 mr-3" />
                 Quick Add Product
