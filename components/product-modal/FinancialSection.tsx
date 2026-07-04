@@ -32,7 +32,7 @@ export const FinancialSection: React.FC<FinancialSectionProps> = ({ formData, ha
       </div>
 
       <div className="space-y-2">
-        <label className="block text-sm font-medium text-slate-700">Purchase Price (₹)</label>
+        <label className="block text-sm font-medium text-slate-700">Purchase Price (₦)</label>
         <input
           type="number"
           min="0"
@@ -68,7 +68,7 @@ export const FinancialSection: React.FC<FinancialSectionProps> = ({ formData, ha
             />
           </div>
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-slate-700">Sold Price (₹)</label>
+            <label className="block text-sm font-medium text-slate-700">Sold Price (₦)</label>
             <input
               type="number"
               min="0"

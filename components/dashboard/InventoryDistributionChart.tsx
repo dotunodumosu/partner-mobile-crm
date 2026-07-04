@@ -29,9 +29,9 @@ export const InventoryDistributionChart: React.FC<InventoryDistributionChartProp
             <YAxis type="category" dataKey="name" hide />
             <RechartsTooltip cursor={{fill: 'transparent'}} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', backgroundColor: 'white' }} />
             <Legend wrapperStyle={{ paddingTop: '16px' }} />
-            <Bar dataKey="InStock" name="In Stock" fill="var(--color-success-600)" radius={[0, 4, 4, 0]} barSize={40} />
-            <Bar dataKey="Sold" name="Sold" fill="var(--color-primary-600)" radius={[0, 4, 4, 0]} barSize={40} />
-            <Bar dataKey="Returned" name="Returned" fill="var(--color-danger-600)" radius={[0, 4, 4, 0]} barSize={40} />
+            <Bar dataKey="InStock" name="In Stock" fill="#ff3333" radius={[0, 6, 6, 0]} barSize={40} />
+            <Bar dataKey="Sold" name="Sold" fill="#111827" radius={[0, 6, 6, 0]} barSize={40} />
+            <Bar dataKey="Returned" name="Returned" fill="#f97316" radius={[0, 6, 6, 0]} barSize={40} />
           </BarChart>
         </ResponsiveContainer>
       </div>

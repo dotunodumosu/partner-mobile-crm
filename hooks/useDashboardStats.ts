@@ -108,7 +108,7 @@ export const useDashboardStats = (products: Product[]) => {
     }> = [];
     
     const recentProducts = [...products].slice(-10).reverse();
-    const formatCurrency = (value: number) => `₹${value.toLocaleString('en-IN')}`;
+    const formatCurrency = (value: number) => `₦${value.toLocaleString('en-IN')}`;
     
     recentProducts.forEach(product => {
       if (product.status === ProductStatus.SOLD) {

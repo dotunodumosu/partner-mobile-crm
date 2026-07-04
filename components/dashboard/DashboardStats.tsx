@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatCard } from '../StatCard';
-import { IndianRupee, TrendingUp, ShoppingBag, AlertCircle } from 'lucide-react';
+import { TrendingUp, BarChart3, Wallet, AlertCircle } from 'lucide-react';
 import { ProductStatus, BillingStatus } from '@/types';
 
 interface DashboardStatsProps {
@@ -22,14 +22,14 @@ export const DashboardStats: React.FC<DashboardStatsProps> = ({
   unbilledCount,
   handleNavigate
 }) => {
-  const formatCurrency = (value: number) => `₹${value.toLocaleString('en-IN')}`;
+  const formatCurrency = (value: number) => `₦${value.toLocaleString('en-IN')}`;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <StatCard
         title="Total Revenue"
         value={formatCurrency(totalRevenue)}
-        icon={IndianRupee}
+        icon={TrendingUp}
         description={`From ${soldCount} sold items`}
         colorClass="text-success-700"
         onClick={() => handleNavigate({ status: ProductStatus.SOLD, billing: 'ALL' })}
@@ -37,7 +37,7 @@ export const DashboardStats: React.FC<DashboardStatsProps> = ({
       <StatCard
         title="Monthly Sales"
         value={formatCurrency(monthlyRevenue)}
-        icon={TrendingUp}
+        icon={BarChart3}
         colorClass="text-primary-700"
         description="Current month revenue"
         onClick={() => handleNavigate({ status: ProductStatus.SOLD, billing: 'ALL' })}
@@ -45,7 +45,7 @@ export const DashboardStats: React.FC<DashboardStatsProps> = ({
       <StatCard
         title="Average Sale"
         value={formatCurrency(Math.round(averageSale))}
-        icon={ShoppingBag}
+        icon={Wallet}
         colorClass="text-info-700"
         description="Per transaction value"
         onClick={() => handleNavigate({ status: ProductStatus.SOLD, billing: 'ALL' })}

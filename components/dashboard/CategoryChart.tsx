@@ -33,7 +33,7 @@ export const CategoryChart: React.FC<CategoryChartProps> = ({ data }) => {
             </Pie>
             <RechartsTooltip 
               contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', backgroundColor: 'white' }}
-              formatter={(value: number) => `₹${value.toLocaleString()}`}
+              formatter={(value: number) => `₦${value.toLocaleString()}`}
             />
           </PieChart>
         </ResponsiveContainer>

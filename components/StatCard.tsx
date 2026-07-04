@@ -17,21 +17,39 @@ export const StatCard: React.FC<StatCardProps> = ({ title, value, icon: Icon, tr
   const bgClass = `bg-${colorName}-50`;
 
   return (
-    <div 
-      onClick={onClick}
-      className={`gap-2 bg-white rounded-xlborder border-slate-200 p-4 flex flex-col justify-between transition-all duration-200 ${onClick ? 'cursor-pointer hover:shadow-md hover:border-brand-200' : ''}`}
-    >
-      <div className="flex items-center justify-between">
-        <h3 className="text-slate-500 text-sm font-medium uppercase tracking-wider">{title}</h3>
-        <div className={`p-2 rounded-full ${bgClass}`}>
-          <Icon className={`w-5 h-5 ${colorClass}`} />
-        </div>
-      </div>
-      <div>
-        <div className="text-xl font-bold text-slate-800">{value}</div>
-        {description && <p className="text-xs text-slate-400 mt-1">{description}</p>}
-        {trend && <p className="text-xs font-medium text-danger-600 mt-2">{trend}</p>}
+  <div
+    onClick={onClick}
+    className={`bg-white rounded-xl border border-slate-200 p-5 flex flex-col justify-between transition-all duration-200 ${
+      onClick ? "cursor-pointer hover:shadow-lg hover:border-brand-300" : ""
+    }`}
+  >
+    <div className="flex items-center justify-between">
+      <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+        {title}
+      </h3>
+
+      <div className={`p-2 rounded-full ${bgClass}`}>
+        <Icon className={`w-5 h-5 ${colorClass}`} />
       </div>
     </div>
+
+    <div className="mt-4">
+      <div className="text-2xl font-semibold tracking-tight text-slate-900">
+        {value}
+      </div>
+
+      {description && (
+        <p className="mt-1 text-sm text-slate-500">
+          {description}
+        </p>
+      )}
+
+      {trend && (
+        <p className="mt-2 text-sm font-medium text-danger-600">
+          {trend}
+        </p>
+      )}
+    </div>
+  </div>
   );
 };

@@ -20,7 +20,7 @@ export const SalesVolumeChart: React.FC<SalesVolumeChartProps> = ({ data }) => {
             <YAxis stroke="#6b7280" tick={{ fontSize: 12 }} />
             <RechartsTooltip contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', backgroundColor: 'white' }} />
             <Legend wrapperStyle={{ paddingTop: '16px' }} />
-            <Bar dataKey="sales" name="Sales Count" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="sales" name="Sales Count" fill="#ff3333" radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>

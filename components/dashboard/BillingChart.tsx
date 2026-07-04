@@ -24,7 +24,7 @@ export const BillingChart: React.FC<BillingChartProps> = ({
   return (
     <div className="bg-white p-6 rounded-xl border border-neutral-200">
       <h3 className="text-base font-semibold text-primary-900 mb-2">Billing & Liability</h3>
-      <p className="text-sm text-primary-700 mb-4">Unbilled Value: ₹{unbilledValue.toLocaleString()}</p>
+      <p className="text-sm text-primary-700 mb-4">Unbilled Value: ₦{unbilledValue.toLocaleString()}</p>
       <div className="h-56 relative" style={{ height: '220px' }}>
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>

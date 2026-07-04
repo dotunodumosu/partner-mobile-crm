@@ -136,7 +136,7 @@ export const InventoryTable: React.FC<InventoryTableProps> = ({
                     )}
                   </TableCell>
                   <TableCell className="py-2.5 font-semibold text-sm text-slate-700 whitespace-nowrap">
-                    ₹{product.purchasePrice.toLocaleString()}
+                    ₦{product.purchasePrice.toLocaleString()}
                   </TableCell>
                   <TableCell className="py-2.5 text-right pr-4 whitespace-nowrap">
                     <div className="flex justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
