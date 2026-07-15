@@ -1,6 +1,6 @@
-# FixSwift CRM
+# Power Mobile CRM
 
-**FixSwift CRM** is a comprehensive Inventory and Billing Management system built with Next.js 16, React 19, and MongoDB. It provides a robust solution for managing products, tracking inventory status, and visualizing business metrics through an intuitive, modular dashboard.
+**Power Mobile CRM** is a comprehensive Inventory and Billing Management system built with Next.js 16, React 19, and MongoDB. It provides a robust solution for managing products, tracking inventory status, and visualizing business metrics through an intuitive, modular dashboard.
 
 ## 🚀 Features
 
